@@ -1,13 +1,13 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
      <div className="container">
-     <Link class="navbar-brand" href="/">
+     <NavLink className="navbar-brand" to="/">
         React 
-      </Link>
+      </NavLink>
       <button
         class="navbar-toggler"
         type="button"
@@ -20,22 +20,22 @@ const Navbar = () => {
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <Link class="nav-link" to="/">
-              Home <span class="sr-only"></span>
-            </Link>
+      <div className="collapse navbar-collapse mr-auto" id="navbarSupportedContent">
+        <ul className="navbar-nav ">
+          <li className="nav-item">
+            <NavLink className="nav-link" exact to="/">
+              Home 
+            </NavLink>
           </li>
-          <li class="nav-item">
-            <Link class="nav-link" to="/about">
+          <li className="nav-item">
+            <NavLink className="nav-link" exact to="/About">
               About
-            </Link>
+            </NavLink>
           </li>
-          <li class="nav-item">
-            <Link class="nav-link" to="/contact">
+          <li className="nav-item">
+            <NavLink className="nav-link" exact to="/Contact">
               Contact
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>
@@ -43,6 +43,6 @@ const Navbar = () => {
     </nav>
 
   );
-};
+}
 
-export default Navbar;
+export default Navbar

@@ -5,7 +5,8 @@ import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import Navbar from './components/layout/Navbar';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import NotFound from './components/pages/NotFound';
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/contact" component={Contact} />
+                <Route component={NotFound}/>
             </Switch>
         </div>
         </Router>
