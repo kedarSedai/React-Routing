@@ -32,13 +32,9 @@ const Navbar = () => {
               About
             </NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" exact to="/Contact">
-              Contact
-            </NavLink>
-          </li>
         </ul>
       </div>
+      <Link className="btn btn-outline-light" to="/addUser">Add User</Link>
      </div>
     </nav>
 
